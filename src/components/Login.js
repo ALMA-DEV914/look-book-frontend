@@ -18,7 +18,7 @@ function Login() {
     };
 
     try {
-      const res = await fetch("/api/login", {
+      const res = await fetch("https://look-book.onrender.com/api/login", {
         method: "POST",
         headers: {
           "Content-type": "application/json",
@@ -34,7 +34,7 @@ function Login() {
   }
 
   useEffect(() => {
-    fetch("/api/isUserAuth", {
+    fetch("https://look-book.onrender.com/api/isUserAuth", {
       headers: {
         "x-access-token": localStorage.getItem("token"),
         'Content-type':'application/json',
@@ -49,11 +49,11 @@ function Login() {
   }, [history]);
 
   const onGoogle = () => {
-    window.open("https://look-book-act-group42.herokuapp.com/auth/google", "_self");
+    window.open("https://look-book.onrender.com/auth/google", "_self");
   };
 
   const onFacebook = () => {
-    window.open("https://look-book-act-group42.herokuapp.com/auth/facebook", "_self");
+    window.open("https://look-book.onrender.com/auth/facebook", "_self");
   };
 
   return (
