@@ -4,7 +4,7 @@ function Upload2() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch(`/api/uploads`, {
+    fetch(`https://look-book.onrender.com/api/uploads`, {
          method: "GET",
          headers: {
           "Access-Control-Allow-Origin": "*",
