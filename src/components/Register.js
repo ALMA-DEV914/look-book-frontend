@@ -19,7 +19,7 @@ function Register() {
     };
 
     try {
-      const res = await fetch("/api/register", {
+      const res = await fetch("https://look-book.onrender.com/api/register", {
         method: "POST",
         headers: {
           "Content-type": "application/json",
@@ -36,7 +36,7 @@ function Register() {
   }
 
   useEffect(() => {
-    fetch("/api/isUserAuth", {
+    fetch("https://look-book.onrender.com/api/isUserAuth", {
         method: "GET",
         headers: {
           "x-access-token": localStorage.getItem("token"),
