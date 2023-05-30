@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const apiUrl = "https://look-book.onrender.com/api";
+const apiUrl = "https://look-book.onrender.com/api/";
 
 
 export const singleFileUpload = async (data, options) => {
