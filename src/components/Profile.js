@@ -38,7 +38,7 @@ const Profile = () => {
 
   useEffect(() => {
     const getUser = () => {
-      fetch("/auth/login/success", {
+      fetch("https://look-book.onrender.com/auth/login/success", {
         credentials: "include",
         headers: {
           "Access-Control-Allow-Origin": "*",
@@ -62,7 +62,7 @@ const Profile = () => {
   }, []);
 
   const logout = () => {
-    window.open("https://look-book-act-group42.herokuapp.com/auth/logout", "_self");
+    window.open("https://look-book.onrender.com/auth/logout", "_self");
   };
 
 
