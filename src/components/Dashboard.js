@@ -39,7 +39,7 @@ function Dashboard() {
   }, []);
 
   useEffect(() => {
-    fetch("https://look-book.onrender.com/api/isUserAuth", {
+    fetch("/api/isUserAuth", {
         headers: {
           "x-access-token": localStorage.getItem("token"),
           'Content-type':'application/json',
