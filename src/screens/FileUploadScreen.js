@@ -13,7 +13,7 @@ const FileUploadScreen = (props) => {
   const [user, setUser] = useState({})
 
   useEffect(() => {
-    fetch("https://look-book.onrender.com/api/isUserAuth", {
+    fetch("/api/isUserAuth", {
       headers: {
         "x-access-token": localStorage.getItem("token"),
         'Content-type':'application/json',
@@ -27,7 +27,7 @@ const FileUploadScreen = (props) => {
 
   useEffect(() => {
     const getUser = () => {
-      fetch("https://look-book.onrender.com/auth/login/success", {
+      fetch("/auth/login/success", {
         method: "GET",
         credentials: "include",
         headers: {
