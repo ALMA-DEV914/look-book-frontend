@@ -9,7 +9,7 @@ function ProfilePage({ match }) {
   const [user, setUser] = useState({});
 
   useEffect(() => {
-    fetch(`https://look-book.onrender.com/api/user/${userId}`, {
+    fetch(`/api/user/${userId}`, {
       method: "GET",
       headers: {
         "x-access-token": localStorage.getItem("token"),
@@ -32,7 +32,7 @@ function ProfilePage({ match }) {
     form[0].value = "";
 
     try {
-      await fetch("https://look-book.onrender.com/api/updateUserInfo", {
+      await fetch("/api/updateUserInfo", {
         method: "POST",
         headers: {
           "x-access-token": localStorage.getItem("token"),
