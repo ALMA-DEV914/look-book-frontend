@@ -18,7 +18,7 @@ function Login() {
     };
 
     try {
-      const res = await fetch("https://look-book.onrender.com/api/login", {
+      const res = await fetch("/api/login", {
         method: "POST",
         headers: {
           "Content-type": "application/json",
@@ -34,7 +34,7 @@ function Login() {
   }
 
   useEffect(() => {
-    fetch("https://look-book.onrender.com/api/isUserAuth", {
+    fetch("/api/isUserAuth", {
       headers: {
         "x-access-token": localStorage.getItem("token"),
         'Content-type':'application/json',
