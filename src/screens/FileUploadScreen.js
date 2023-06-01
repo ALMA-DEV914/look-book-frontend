@@ -14,6 +14,7 @@ const FileUploadScreen = (props) => {
 
   useEffect(() => {
     fetch("/api/isUserAuth", {
+      mode: "cors",
       headers: {
         "x-access-token": localStorage.getItem("token"),
         'Content-type':'application/json',
@@ -28,6 +29,7 @@ const FileUploadScreen = (props) => {
   useEffect(() => {
     const getUser = () => {
       fetch("/auth/login/success", {
+        mode: "cors",
         method: "GET",
         credentials: "include",
         headers: {
