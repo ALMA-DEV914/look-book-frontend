@@ -2,10 +2,23 @@ import axios from 'axios';
 
  const url = "https://look-book.onrender.com/posts";
 
-export const fetchPosts = () => axios.get(url);
-export const createPost = (newPost) => axios.post(url, newPost);
-export const likePost = (id) => axios.patch(`${url}/${id}/likePost` );
-export const updatePost = (id, updatedPost) => axios.patch(`${url}/${id}`, updatedPost);
-export const deletePost = (id) => axios.delete(`${url}/${id}`);
+//defining mongoose options
+const options = {
+  origin: ["http://localhost:3000" , "https://look-book.onrender.com/"],
+  credentials: "include",
+  header: {
+    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Credentials": true,
+    "Content-type":"application/json",
+    "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH,OPTIONS",
+  },
+};
+
+
+export const fetchPosts = () => axios.get(url, options);
+export const createPost = (newPost) => axios.post(url, newPost, options);
+export const likePost = (id) => axios.patch(`${url}/${id}/likePost`, options );
+export const updatePost = (id, updatedPost) => axios.patch(`${url}/${id}`, updatedPost, options);
+export const deletePost = (id) => axios.delete(`${url}/${id}`, options);
 
 
