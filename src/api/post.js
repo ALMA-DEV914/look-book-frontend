@@ -5,10 +5,9 @@ import axios from 'axios';
 //defining mongoose options
 const options = {
   origin: ["http://localhost:3000" , "https://look-book.onrender.com/"],
-  credentials: "include",
+  mode: "no-cors",
   header: {
     "Access-Control-Allow-Origin": "*",
-    "Access-Control-Allow-Credentials": true,
     "Content-type":"application/json",
     "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH,OPTIONS",
   },
